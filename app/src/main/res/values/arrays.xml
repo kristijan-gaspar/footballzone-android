@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Croatian</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>en</item>
+        <item>hr</item>
+    </string-array>
+
+        <integer-array name="league_ids">
+            <item>39</item>
+            <item>140</item>
+<!--            <item>135</item>-->
+<!--            <item>78</item>-->
+<!--            <item>61</item>-->
+        </integer-array>
+
+</resources>

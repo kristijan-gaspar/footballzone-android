@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/appearance" >
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_dark_mode"
+            android:key="@string/dark_mode"
+            android:summary="@string/enable_dark_mode"
+            android:title="@string/_dark_mode" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/general">
+
+        <ListPreference
+            android:defaultValue="en"
+            android:entries="@array/languages"
+            android:entryValues="@array/language_values"
+            android:icon="@drawable/ic_language"
+            android:key="@string/language"
+            android:summary="@string/select_language"
+            android:title="@string/_language" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/other">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:icon="@drawable/ic_notifications"
+            android:key="@string/notifications"
+            android:summary="@string/enable_notifications"
+            android:title="@string/_notifications" />
+
+        <Preference
+            android:icon="@drawable/ic_info"
+            android:key="@string/about"
+            android:title="@string/about_application" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

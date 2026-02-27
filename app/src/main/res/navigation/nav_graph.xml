@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="hr.algebra.footballzone.fragment.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splash_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="hr.algebra.footballzone.fragment.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="hr.algebra.footballzone.fragment.SettingsFragment"
+        android:label="@string/settings" />
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="hr.algebra.footballzone.fragment.FavoritesFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="hr.algebra.footballzone.fragment.AboutFragment"
+        android:label="@string/about_app"
+        tools:layout="@layout/fragment_about" />
+
+
+    <fragment
+        android:id="@+id/leagueDetailsFragment"
+        android:name="hr.algebra.footballzone.fragment.LeagueDetailsFragment"
+        android:label="@string/league_details"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        tools:layout="@layout/fragment_league_details">
+
+        <argument
+            android:name="leagueId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/matchesFragment"
+        android:name="hr.algebra.footballzone.fragment.MatchesFragment"
+        android:label="@string/_matches"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        tools:layout="@layout/fragment_matches">
+
+        <argument
+            android:name="leagueId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/standingsFragment"
+        android:name="hr.algebra.footballzone.fragment.StandingsFragment"
+        android:label="Standings"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        tools:layout="@layout/fragment_standings">
+
+        <argument
+            android:name="leagueId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/matchDetailsFragment"
+        android:name="hr.algebra.footballzone.fragment.MatchDetailsFragment"
+        android:label="@string/match_details"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        tools:layout="@layout/fragment_match_details">
+
+        <argument
+            android:name="matchId"
+            app:argType="integer" />
+    </fragment>
+
+
+</navigation>

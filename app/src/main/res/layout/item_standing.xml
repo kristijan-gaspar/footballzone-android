@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8dp"
+    android:layout_marginVertical="@dimen/_4dp"
+    app:cardCornerRadius="@dimen/_12dp"
+    app:cardElevation="@dimen/_2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12dp">
+
+        <!-- RANK -->
+        <TextView
+            android:id="@+id/tvRank"
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+        <!-- TEAM (LOGO + NAME) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- LOGO S BIJELOM POZADINOM -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/ivTeamLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- NAZIV TIMA -->
+            <TextView
+                android:id="@+id/tvTeamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <!-- POINTS -->
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textStyle="bold" />
+
+        <!-- GOAL DIFF -->
+        <TextView
+            android:id="@+id/tvGoalsDiff"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="wrap_content"
+            android:gravity="end" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

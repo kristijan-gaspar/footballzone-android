@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dark_mode" translatable="false">dark_mode</string>
+    <string name="language" translatable="false">language</string>
+    <string name="notifications" translatable="false">notifications</string>
+</resources>

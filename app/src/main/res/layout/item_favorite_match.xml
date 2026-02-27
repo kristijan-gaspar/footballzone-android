@@ -1,0 +1,97 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_6dp"
+    android:layout_marginHorizontal="@dimen/_12dp"
+    app:cardCornerRadius="@dimen/_14dp"
+    app:cardElevation="@dimen/_3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_14dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- HOME LOGO (WHITE BACKGROUND) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_48dp"
+                android:layout_height="@dimen/_48dp"
+                app:cardCornerRadius="@dimen/_10dp"
+                app:cardElevation="0dp"
+                android:layout_marginEnd="@dimen/_12dp">
+
+                <ImageView
+                    android:id="@+id/ivHomeLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvHomeTeamCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="MAN"
+                android:textSize="@dimen/_16sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="@dimen/_8dp"/>
+
+            <!-- SCORE -->
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2 : 1"
+                android:textSize="@dimen/_26sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="@dimen/_8dp"/>
+
+            <TextView
+                android:id="@+id/tvAwayTeamCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="MCI"
+                android:textSize="@dimen/_16sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="@dimen/_8dp"/>
+
+            <!-- AWAY LOGO (WHITE BACKGROUND) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_48dp"
+                android:layout_height="@dimen/_48dp"
+                app:cardCornerRadius="@dimen/_10dp"
+                app:cardElevation="0dp"
+                android:layout_marginStart="@dimen/_12dp">
+
+                <ImageView
+                    android:id="@+id/ivAwayLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- REMOVE BUTTON -->
+        <ImageButton
+            android:id="@+id/btnRemove"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_x_circle"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
